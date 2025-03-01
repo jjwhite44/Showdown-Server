@@ -226,13 +226,24 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 		restricted: ['Restricted Legendary'],
 	},
 	{
-		name: "[Gen 9] Test Custom Ruleset (Bo3)",
-		mod: 'gen9',
-		gameType: 'doubles',
-		bestOfDefault: true,
-		ruleset: ['Flat Rules', '!! Adjust Level = 50', 'Min Source Gen = 9', 'VGC Timer', 'Force Open Team Sheets', 'Best of = 3', 'Limit One Restricted', 'Test Custom Pokedex'],
-		restricted: ['Restricted Legendary'],
-	},
+		name: "[Gen 9] Custom Draft Ruleset",
+		mod: "gen9",
+		gameType: "doubles",
+		ruleset: ['Flat Rules', '!! Adjust Level = 50', 'VGC Timer'],
+		banlist: [
+		  "Uber",
+		  "Mythical",
+		  "Legendary",
+		  "Pikachu-Cosplay", "Pikachu-Rock-Star", "Pikachu-Belle", "Pikachu-PhD", "Pikachu-Pop-Star", "Pikachu-Libre",
+		  "Spiky-eared Pichu", "Cap Pikachu", "Partner Pikachu", "Partner Eevee",
+		],
+		onValidateSet(set) {
+		  const species = this.dex.species.get(set.species);
+		  if (species.gen > 4) {
+			return [`${species.name} is from a generation later than Gen 4 and is not allowed.`];
+		  }
+		},
+	  },
 	{
 		name: "[Gen 9] Doubles Custom Game",
 		mod: 'gen9',
