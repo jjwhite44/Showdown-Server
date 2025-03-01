@@ -1,73 +1,61 @@
-# /config/*
-# !/config/formats.ts
-/logs/**/*
-/test/modlogs
-/test/replays/*.html
-/node_modules
-/eslint-cache
-/server/chat-plugins/private
-/server/chat-plugins/private.js
-/server/chat-plugins/*-private.js
-npm-debug.log
-.eslintcache
-.eslintcache-no-types
-/tools/set-import/sets
-databases/*.db*
-*.o
-*.o.dSYM
-# Typescript build artifacts
-.*-dist/
-tools/set-import/importer.js
-tools/modlog/converter.js
-*.tsbuildinfo
-**/sourceMaps
+# Ignore logs and temp files  
+/logs/**/*  
+/test/modlogs  
+/test/replays/*.html  
 
-!test/**/*.js
-tools/modlog/**/*.js
-tools/set-import/*.js
+# Ignore dependencies and caches  
+/node_modules  
+/eslint-cache  
+npm-debug.log  
+.eslintcache  
+.eslintcache-no-types  
 
-# visual studio live share
-.vs
+# Ignore temporary build artifacts  
+/tools/set-import/sets  
+/tools/set-import/importer.js  
+/tools/modlog/converter.js  
+*.tsbuildinfo  
+**/sourceMaps  
+!test/**/*.js  
+tools/modlog/**/*.js  
+tools/set-import/*.js  
 
-# boilerplate #
-###############
+# Ignore personal IDE/editor files  
+.vs  
+.idea/  
+.DS_Store  
+*~  
+*.swp  
 
-.DS_Store
+# Ignore system-generated temporary files  
+tmp/**/*  
+*.lock  
+*.out  
+*.pyc  
+*.pyo  
+.installed.cfg  
 
-# editor temp files
-*~
-.idea/
+# Ignore package build artifacts  
+downloads  
+dist  
 
-tmp/**/*
-*.lock
-*.DS_Store
-*.swp
-*.out
-*.pyc
-*.pyo
-.installed.cfg
+# Ignore unnecessary metadata files  
+develop-eggs  
+*.egg-info  
+*.egg  
+*.EGG  
+*.EGG-INFO  
+src/*.egg-info  
+eggs  
+fake-eggs  
 
-downloads
-dist
+# Ignore Django-specific settings (not needed for Showdown, but keeping just in case)  
+local_settings.py  
 
-# egg related
-develop-eggs
-*.egg-info
-*.egg
-*.EGG
-*.EGG-INFO
-src/*.egg-info
-eggs
-fake-eggs
+# Ignore version control system files  
+.hg  
+.bzr  
+.svn  
 
-# django
-local_settings.py
-
-# SCM
-.hg
-.bzr
-.svn
-
-pip-log.txt
-# redis dumps
-*.rdb
+# Ignore redis dumps  
+*.rdb  
