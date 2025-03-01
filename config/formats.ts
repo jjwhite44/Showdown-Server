@@ -230,13 +230,6 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 		mod: "gen9",
 		gameType: "doubles",
 		ruleset: ['Flat Rules', '!! Adjust Level = 50', 'VGC Timer'],
-		banlist: [
-		  "Uber",
-		  "Mythical",
-		  "Legendary",
-		  "Pikachu-Cosplay", "Pikachu-Rock-Star", "Pikachu-Belle", "Pikachu-PhD", "Pikachu-Pop-Star", "Pikachu-Libre",
-		  "Spiky-eared Pichu", "Cap Pikachu", "Partner Pikachu", "Partner Eevee",
-		],
 		onValidateSet(set) {
 		  const species = this.dex.species.get(set.species);
 		  if (species.gen > 4) {

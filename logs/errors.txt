@@ -58,3 +58,11 @@ Error: Invalid generation 9 for a Gen 4 format ([Gen 4] Test Custom Ruleset (Bo3
     at Object.socketConnect (/Users/jeremywhite/Desktop/Showdown Server/pokemon-showdown/server/users.ts:1666:15)
     at Object.onSpawn (/Users/jeremywhite/Desktop/Showdown Server/pokemon-showdown/server/sockets.ts:34:11)
     at processTicksAndRejections (node:internal/process/task_queues:105:5)
+
+Error: Rule "-Mythical" in "[Gen 9] Custom Draft Ruleset" already exists in "Flat Rules"
+    at DexFormats.getRuleTable (/Users/jeremywhite/Desktop/Showdown Server/Showdown-Server/sim/dex-formats.ts:765:12)
+    at GlobalRoomState.get formatListText [as formatListText] (/Users/jeremywhite/Desktop/Showdown Server/Showdown-Server/server/rooms.ts:1480:34)
+    at GlobalRoomState.handleConnect (/Users/jeremywhite/Desktop/Showdown Server/Showdown-Server/server/rooms.ts:1735:80)
+    at Object.socketConnect (/Users/jeremywhite/Desktop/Showdown Server/Showdown-Server/server/users.ts:1666:15)
+    at Object.onSpawn (/Users/jeremywhite/Desktop/Showdown Server/Showdown-Server/server/sockets.ts:34:11)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
